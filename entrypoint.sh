@@ -9,7 +9,7 @@ if [ ! -e stylelint_path ]; then
   yarn add stylelint stylelint-config-standard --silent
 fi
 
-if [ ! -e "./.stylelintrc" ]; then
+if [ ! -e "./.stylelintrc" ] || [ ! -e "./.stylelintrc.json" ]; then
   if [ -z "${INDENT_SPACES-}" ]; then
     indent_spaces=$INDENT_SPACES
   fi
